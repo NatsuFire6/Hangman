@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Hangman"
+	"github.com/NatsuFire6/Hangman"
 	"fmt"
 	"os"
 )
