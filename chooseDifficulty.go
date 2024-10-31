@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func ChooseDifficulty(faitchier int) ([]byte, int) {
+func ChooseDifficulty(repete int) ([]byte, int) {
 	difficulty := ""
 	fmt.Scan(&difficulty)
 	if difficulty == "easy" {
@@ -33,20 +33,20 @@ func ChooseDifficulty(faitchier int) ([]byte, int) {
 		}
 		return file, 4
 	} else {
-		faitchier++
+		repete++
 		print("\n")
-		if faitchier == 3 {
+		if repete == 3 {
 			fmt.Println("\033[1m\033[3mTu commence à me courir sur le haricot, alors choisi une p**** de difficulté !\033[0m")
-			return ChooseDifficulty(faitchier)
-		} else if faitchier == 6 {
+			return ChooseDifficulty(repete)
+		} else if repete == 6 {
 			fmt.Println("\033[1m\033[3mWesh ! Nan mais là gros tu dose pas, j'ai juré tu vas choisir une difficulté !\033[0m")
-			return ChooseDifficulty(faitchier)
-		} else if faitchier == 10 {
+			return ChooseDifficulty(repete)
+		} else if repete == 10 {
 			fmt.Println("\033[1m\033[3mAlors là gros fait gaffe à ta maison parce que là je vais venir te buter toi et toutes ta famille dans ton lit ce soir !!!!!!!!\033[0m")
 			return nil, 0
 		} else {
 			fmt.Println("Vous n'avez pas entrée la bonne difficulté, veuillez choisir : \033[1measy\033[0m, \033[1mmedium\033[0m, \033[1mhard\033[0m ou \033[1mspécial\033[0m")
-			return ChooseDifficulty(faitchier)
+			return ChooseDifficulty(repete)
 		}
 	}
 }
