@@ -15,13 +15,13 @@ func main() {
 
 func start (point int){
 	var life int = 10
-	var faitchier int = 0
+	var repete int = 0
 	tab := make(map[rune]bool)
 	aide := ""
 	wordhelp := ""
 
 	fmt.Println("Veuillez choisir une difficulté : \033[1measy\033[0m, \033[1mmedium\033[0m, \033[1mhard\033[0m, \033[1mspécial\033[0m")
-	difficulty, difficultypoint := Hangman.ChooseDifficulty(faitchier)
+	difficulty, difficultypoint := Hangman.ChooseDifficulty(repete)
 	word := Hangman.Aleatoire(difficulty)
 
 	fmt.Println("Voulez-vous de l'aide ? oui/non")

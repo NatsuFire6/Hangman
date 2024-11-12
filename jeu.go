@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Jeu(word string, wordhelp string, life int, tab map[rune]bool, point int, difficultypoint int, aide string) int {
+func Jeu(word string, wordhelp string, life int, tab map[rune]bool, point int, difficultypoint int, aide string, letter string) int {
 	pointAide := 1
 	wordfind := make([]string, len(word))
 	pass := false
@@ -35,7 +35,7 @@ func Jeu(word string, wordhelp string, life int, tab map[rune]bool, point int, d
 	}
 	fmt.Println()
 	for life >= 1 {
-		fmt.Scan(&letter)
+		//fmt.Scan(&letter)
 		if len(letter) >= 2 {
 			fmt.Println("Vous ne devez entrer qu'une seul valeur.")
 		} else if rune(letter) < 97 || rune(letter) > 122{ 
