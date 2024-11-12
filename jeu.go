@@ -37,7 +37,7 @@ func Jeu(word string, wordhelp string, life int, tab map[rune]bool, point int, d
 		//fmt.Scan(&letter)
 		if len(letter) >= 2 {
 			fmt.Println("Vous ne devez entrer qu'une seul valeur.")
-		} else if rune(letter) < 97 || rune(letter) > 122{ 
+		} else if []rune(letter)[0] < 97 || []rune(letter)[0] > 122{ 
 			fmt.Println("Veuillez entrer une lettre de l'alphabet en minuscule.")
 		} else {
 			for i := 0; i < len(word); i++ {
