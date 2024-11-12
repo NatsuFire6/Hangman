@@ -9,7 +9,6 @@ func Jeu(word string, wordhelp string, life int, tab map[rune]bool, point int, d
 	wordfind := make([]string, len(word))
 	pass := false
 	verif := false
-	var letter string
 
 	if word == "" {
 		return point/2
